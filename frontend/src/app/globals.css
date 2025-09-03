@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root { color-scheme: dark; }
+body { @apply text-neutral-100; }
+
+/* Glassmorphism (gelap agar kontras) */
+.glass-1 { @apply bg-black/40 backdrop-blur-md border border-white/10; }
+.glass-2 { @apply bg-black/50 backdrop-blur-lg border border-white/10; }
+.glass-3 { @apply bg-black/55 backdrop-blur-xl border border-white/10; }
+.glass-4 { @apply bg-black/60 backdrop-blur-2xl border border-white/10; }
+
+/* Background helper */
+.bg-dashboard {
+  background-image: url("/assets/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay untuk meningkatkan keterbacaan */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  pointer-events: none;
+  z-index: -1;
+}
